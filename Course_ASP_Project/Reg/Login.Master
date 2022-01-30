@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Login.master.cs" Inherits="Course_ASP_Project.Reg.Login" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Course Management</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../Designs/Login/css/bootstrap/mixins/_border-radius.css" rel="stylesheet" />
+    <link href="../Designs/Login/css/bootstrap/mixins/_resize.css" rel="stylesheet" />
+    <link href="../Designs/Login/css/bootstrap/mixins/_screen-reader.css" rel="stylesheet" />
+    <link href="../Designs/Login/css/bootstrap/mixins/_transition.css" rel="stylesheet" />
+    <link href="../Designs/Login/css/bootstrap/mixins/_visibility.css" rel="stylesheet" />
+    <link href="../Designs/Login/css/bootstrap/utilities/_stretched-link.css" rel="stylesheet" />
+    <link href="../Designs/Login/css/bootstrap/_media.css" rel="stylesheet" />
+    <link href="../Designs/Login/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Designs/Login/css/style.css" rel="stylesheet" />
+    <script src="../Designs/Login/js/bootstrap.min.js"></script>
+    <script src="../Designs/Login/js/jquery.min.js"></script>
+    <script src="../Designs/Login/js/main.js"></script>
+    <script src="../Designs/Login/js/popper.js"></script>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div>
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <ContentTemplate>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+            
+        </div>
+    </form>
+</body>
+</html>

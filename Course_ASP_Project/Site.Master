@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Course_ASP_Project.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Course Management</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
+
+    <link href="Designs/sidebar/css/bootstrap/mixins/_size.css" rel="stylesheet" />
+    <link href="Designs/sidebar/css/bootstrap/mixins/_table-row.css" rel="stylesheet" />
+    <link href="Designs/sidebar/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Designs/sidebar/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="Designs/sidebar/css/style.css" rel="stylesheet" />
+    <link href="Designs/sidebar/fonts/icomoon/demo-files/demo.css" rel="stylesheet" />
+    <script src="Designs/sidebar/fonts/icomoon/demo-files/demo.js"></script>
+    <link href="Designs/sidebar/fonts/icomoon/style.css" rel="stylesheet" />
+    <script src="Designs/sidebar/js/bootstrap.min.js"></script>
+    <script src="Designs/sidebar/js/jquery-3.3.1.min.js"></script>
+    <script src="Designs/sidebar/js/main.js"></script>
+    <script src="Designs/sidebar/js/owl.carousel.min.js"></script>
+    <script src="Designs/sidebar/js/popper.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+
+        a, #lbtnSignOut{
+            text-decoration:none;
+        }
+    </style>
+</head>
+<body>
+    
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <aside class="sidebar">
+      <div class="toggle">
+        <a href="." class="burger js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
+              <span></span>
+            </a>
+      </div>
+      <div class="side-inner">
+        <div class="profile">
+          <img src="Designs/sidebar/images/image.png" alt="Image" class="img-fluid"><br />
+            <asp:Label ID="lblLoginUser" runat="server" Text=""></asp:Label>
+        </div>
+         
+          
+        <div class="nav-menu">
+          <ul>
+             <li><a href="home"><span></span>Home</a></li>
+             <li><a href="ObjCrud"><span></span>Object CRUD</a></li>
+             <li><a href="SqlCrud"><span></span>SQL CRUD</a></li>
+             <li><a href="EntityCrud"><span></span>Entity CRUD</a></li>
+             <li><a href="#"><span></span>Views</a></li>
+            <li><asp:LinkButton ID="LinkButton2" class="icon-pie-chart mr-3" runat="server" OnClick="btnReport_Click" CausesValidation="false">Report</asp:LinkButton></li>
+            <li><asp:LinkButton ID="LinkButton1" class="icon-sign-out mr-3" runat="server" OnClick="lbtnSignOut_Click" CausesValidation="false">Sign Out</asp:LinkButton></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+        <div>
+            <section id="MainContent">
+                   <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            </section>
+        </div>
+    </form>
+</body>
+</html>
